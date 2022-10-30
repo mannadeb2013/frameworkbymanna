@@ -1,0 +1,4 @@
+com\nocommerce\hooks\Hook.class
+com\nocommerce\stepdef\RegisterAndLogin.class
+com\nocommerce\stepdef\SearchAndCheckout.class
+com\nocommerce\runner\Runner.class
