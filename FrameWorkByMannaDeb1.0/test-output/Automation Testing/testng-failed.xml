@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Automation Testing]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.sauseDemo.listener.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Default Testing(failed)">
+    <classes>
+      <class name="com.sausedemo.runner.Runner">
+        <methods>
+          <include name="beforeclass"/>
+          <include name="afterclass"/>
+          <include name="runScenario" invocation-numbers="1"/>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- com.sausedemo.runner.Runner -->
+    </classes>
+  </test> <!-- Default Testing(failed) -->
+</suite> <!-- Failed suite [Automation Testing] -->

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumber-jvm-example</td>
+              <td>1</td>
+            <td>03 Nov 2022, 18:59</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">com.sausedemo.hooks.hooks.initialize()</td>
+              <td>6</td>
+              <td class="duration" data-value="48520781400">48.520</td>
+              <td class="duration" data-value="8086796900">8.086</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.hooks.hooks.tearDown()</td>
+              <td>6</td>
+              <td class="duration" data-value="1668477900">1.668</td>
+              <td class="duration" data-value="278079650">0.278</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.one_user_open_the_browser()</td>
+              <td>2</td>
+              <td class="duration" data-value="6317067600">6.317</td>
+              <td class="duration" data-value="3158533800">3.158</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.two_user_navigate_to(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="798875200">0.798</td>
+              <td class="duration" data-value="399437600">0.399</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.u_ser_put_valid_last_name()</td>
+              <td>1</td>
+              <td class="duration" data-value="104069900">0.104</td>
+              <td class="duration" data-value="104069900">0.104</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_click_on_continue()</td>
+              <td>1</td>
+              <td class="duration" data-value="76450400">0.076</td>
+              <td class="duration" data-value="76450400">0.076</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_click_on_logout_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="143398700">0.143</td>
+              <td class="duration" data-value="143398700">0.143</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_click_on_menu_bar()</td>
+              <td>1</td>
+              <td class="duration" data-value="80166900">0.080</td>
+              <td class="duration" data-value="80166900">0.080</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_click_on_shopping_cart()</td>
+              <td>1</td>
+              <td class="duration" data-value="78854900">0.078</td>
+              <td class="duration" data-value="78854900">0.078</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_click_on_submit_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="274901000">0.274</td>
+              <td class="duration" data-value="137450500">0.137</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_click_on_the_sauce_labs_backpack()</td>
+              <td>1</td>
+              <td class="duration" data-value="65873800">0.065</td>
+              <td class="duration" data-value="65873800">0.065</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_clicks_on_check_out_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="71564800">0.071</td>
+              <td class="duration" data-value="71564800">0.071</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_displayed_thank_you_f_or_your_order_page_message()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_go_to_checkout_over_review_page_and_click_on_finish()</td>
+              <td>1</td>
+              <td class="duration" data-value="68923000">0.068</td>
+              <td class="duration" data-value="68923000">0.068</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_put_valid_first_name()</td>
+              <td>1</td>
+              <td class="duration" data-value="163540900">0.163</td>
+              <td class="duration" data-value="163540900">0.163</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_put_valid_user_name()</td>
+              <td>2</td>
+              <td class="duration" data-value="359907600">0.359</td>
+              <td class="duration" data-value="179953800">0.179</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_put_valid_user_password()</td>
+              <td>2</td>
+              <td class="duration" data-value="228327200">0.228</td>
+              <td class="duration" data-value="114163600">0.114</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_put_valid_zip_code()</td>
+              <td>1</td>
+              <td class="duration" data-value="79993600">0.079</td>
+              <td class="duration" data-value="79993600">0.079</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_should_successfully_log_out()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.LoginCheckoutlogout.user_successfully_logged_in_in_page()</td>
+              <td>2</td>
+              <td class="duration" data-value="77400">0.000</td>
+              <td class="duration" data-value="38700">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.NegetiveLoginStefdef.i_am_suppose_to_get_an_error_message()</td>
+              <td>4</td>
+              <td class="duration" data-value="421500">0.000</td>
+              <td class="duration" data-value="105375">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.NegetiveLoginStefdef.i_click_on_the_login_button()</td>
+              <td>4</td>
+              <td class="duration" data-value="261696500">0.261</td>
+              <td class="duration" data-value="65424125">0.065</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.NegetiveLoginStefdef.i_enter_and(java.lang.String,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="919236100">0.919</td>
+              <td class="duration" data-value="229809025">0.229</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.sausedemo.stefdef.NegetiveLoginStefdef.i_open_the_browser_and_i_navigate_to_the_application()</td>
+              <td>4</td>
+              <td class="duration" data-value="7424152200">7.424</td>
+              <td class="duration" data-value="1856038050">1.856</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>24</td>
+            <td>52</td>
+            <td class="duration">1:7.706</td>
+            <td class="duration">1.302</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

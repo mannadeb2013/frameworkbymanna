@@ -18,8 +18,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseProjectClass {
 	public static WebDriver driver;
 
-	public static String name = " mannaaa2@gmail.com";
-	public static String pass = "8657";
+	public static String name = " mannaaa21@gmail.com";
+	public static String pass = "865790";
 
 	public static void Browserlaunch()  {
 

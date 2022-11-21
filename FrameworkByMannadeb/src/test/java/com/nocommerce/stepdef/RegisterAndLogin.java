@@ -10,37 +10,40 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+
+
 public class RegisterAndLogin extends BaseProjectClass {
 	
+
 	@Given("Users open the browser")
 	public void users_open_the_browser() {
-	   
 		BaseProjectClass.Browserlaunch();
+	   
 	}
 
 	@Given("Users Navigate to {string}")
 	public void users_navigate_to(String string) {
-	   
 		driver.get("https://demo.nopcommerce.com/");
+	   
 	}
 
 	@When("Users click on the register button")
 	public void users_click_on_the_register_button() {
-	   
 		driver.findElement(By.xpath("//a[@href='/register?returnUrl=%2F']")).click();
+	   
 	}
 
 	@When("Users select the Gender")
 	public void users_select_the_gender() {
-	   
 		driver.findElement(By.xpath("//input[@id='gender-male']")).click();	
+	   
 	}
 
 	@When("Users enter the Name")
 	public void users_enter_the_name() {
-	   
 		driver.findElement(By.xpath("//input[@name='FirstName']")).sendKeys("Manna");
 		driver.findElement(By.xpath("//input[@name='LastName']")).sendKeys("Deb");
+	   
 	}
 
 	@When("Users enter Date of birth")
@@ -58,8 +61,8 @@ public class RegisterAndLogin extends BaseProjectClass {
 
 	@When("Users enter Valid Email")
 	public void users_enter_valid_email() {
+	  
 		driver.findElement(By.id("Email")).sendKeys(name);
-	   
 	}
 
 	@When("Users enter Company Name")
@@ -77,40 +80,41 @@ public class RegisterAndLogin extends BaseProjectClass {
 
 	@When("Users click on Register Button")
 	public void users_click_on_register_button() {
-	   
+	  
 		driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
 	}
 
 	@Then("Users Finishes registration")
 	public void users_finishes_registration() {
-	   
 		driver.findElement(By.xpath("//a[@class='button-1 register-continue-button']")).sendKeys(Keys.ENTER);
+	   
 	}
 
 	@Given("Users displayed successfully register message and Logs out")
 	public void users_displayed_successfully_register_message_and_logs_out() {
-	   
 		driver.findElement(By.xpath("//a[@class='ico-logout']")).click();
+	   
 	}
 
 	@When("User clicks the Login button")
 	public void user_clicks_the_login_button() {
-	   
 		driver.findElement(By.xpath("//a[@class='ico-login']")).click();
+	   
 	}
 
 	@When("Enters the Email and Password")
 	public void enters_the_email_and_password() {
+	  
 		driver.findElement(By.id("Email")).sendKeys(name);
 		driver.findElement(By.id("Password")).sendKeys(pass);
-	   
 	}
 
 	@Then("Users Logs in and navigates to home page")
 	public void users_logs_in_and_navigates_to_home_page() {
-	   
+	  
 		driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
 	}
+
 
 
 

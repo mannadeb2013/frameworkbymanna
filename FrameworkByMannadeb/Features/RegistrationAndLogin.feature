@@ -1,28 +1,27 @@
-Feature: Testing the Register and Login/Logout functionality to the application 
- 
+Feature: TEsting the register functionality to the Application 
 
-@Registration 
- Scenario: User can Register with valid information
- 
- Given Users open the browser
- And Users Navigate to "https://demo.nopcommerce.com/"
- When Users click on the register button 
- And Users select the Gender
- And Users enter the Name 
- And Users enter Date of birth 
- And Users enter Valid Email
- And Users enter Company Name 
- And Users enter Password and Confirm Password 
- And Users click on Register Button 
- Then Users Finishes registration
- 
- 
- 
- @LogoutandLogin 
- Scenario: User logs out and Logs back inn with correct email and password
-	Given Users displayed successfully register message and Logs out
-	When User clicks the Login button
-	And Enters the Email and Password
- 	Then Users Logs in and navigates to home page 
+Scenario: User is able to register with the required information 
+
+Given user open the browser 
+And user navigate to "https://demo.nopcommerce.com/"
+When user click on register button 
+And user select the Gender 
+And user enter the Nmae 
+And User enter date of birth 
+And user enter email 
+And user enter company Name 
+And user enter password and confirm password 
+And user click on register button 
+Then user finishes registrstion 
+
+
+Scenario: User is able to logout and lonin back with register email and password 
+
+When User click on Logout button 
+And user click in login button 
+And user enter email and password 
+And user click on submit button 
+Then user navigate to home page 
+
  
 
