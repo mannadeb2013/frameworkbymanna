@@ -1,5 +1,6 @@
 package com.sausedemo.stefdef;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
@@ -108,7 +109,9 @@ public class LoginCheckoutlogout extends  BaseClass1{
 	@Then("User Displayed Thank You FOr Your Order Page Message")
 	public void user_displayed_thank_you_f_or_your_order_page_message() {
 	   
-	    
+	    String expected = driver.findElement(By.xpath("//*[@class='complete-header']")).getText();
+	    String Actual = driver.findElement(By.xpath("//*[@class='complete-header']")).getText();
+	    Assert.assertEquals(expected,Actual );
 	}
 
 	@When("User Click on Menu bar")
